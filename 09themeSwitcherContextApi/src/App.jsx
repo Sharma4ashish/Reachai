@@ -1,8 +1,34 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ThemeButton from "./components/ThemeButton";
 import Card from "./components/Card";
 import { ThemeProvider } from "./context/theme"; 
+import { UserContextProvider } from "./context/UserContextProvider";
+
+import Login from './components/Login'
+import Profile from "./components/profile";
+
+
+
+// Context api 1
+
+// function App() {
+//   return  (
+//     <>
+//       <UserContextProvider>
+//         <Login/>
+//         <Profile/>
+//       </UserContextProvider>
+//     </> 
+//   );
+// }
+
+
+
+
+
+
+
 
 function App() {
   const [themeMode, setThemeMode] = useState("light")
@@ -39,6 +65,7 @@ function App() {
       </div>
     </div>
     </ThemeProvider>
+    
   );
 }
 
