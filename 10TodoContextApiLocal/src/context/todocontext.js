@@ -6,13 +6,18 @@ export const TodoContext = createContext({
             id: 1,
             content: "First Todo ",            
             isComplete : false
-        },
-    ],    
-    setTodo: ()=>{},
-    deleteTodo: ()=>{},
-    todoStatus:()=>{}
+        }
+    ],  
+    
+    addTodo: (todo)=>{},
+    deleteTodo: (id)=>{},
+    updateStatus:(id,todo)=>{},
+    isCompleteHandler:(id)=>{}
 
 });
+
+
+
 
 export const TodoProvider = TodoContext.Provider;
 
